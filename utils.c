@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 15:11:05 by qxia              #+#    #+#             */
-/*   Updated: 2022/04/14 13:03:51 by qxia             ###   ########.fr       */
+/*   Created: 2022/04/14 11:10:32 by qxia              #+#    #+#             */
+/*   Updated: 2022/04/14 13:13:22 by qxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "philo.h"
 
-static void	philo_eat(t_each_philo *each_philo)
+int ft_strlen(char const *str)
 {
-	const int left = each_philo->id - 1;
-	const int right = each_philo=>id % each_philo->info_utils->nbr_philo;
+	int	i;
 
-
+	i = 0;
+	while(str[i])
+		i++;
+	return (i);
 }
 
-static void put_forks(t_each_philo *each_philo)
-{
-
-}
-
-static void	eating(t_each_philo *each_philo)
+int ft_atoi(char const *str)
 {
 
 }
 
-static void	sleeping(t_each_philo *each_philo)
+void	ft_putnbr_fd
+
+size_t	get_time(void)
 {
-	if(	
+
 }
