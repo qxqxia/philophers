@@ -1,40 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 15:11:05 by qxia              #+#    #+#             */
-/*   Updated: 2022/04/14 16:10:46 by qxia             ###   ########.fr       */
+/*   Created: 2022/04/14 17:15:33 by qxia              #+#    #+#             */
+/*   Updated: 2022/04/14 17:17:41 by qxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "philo.h"
 
-static void	philo_eat(t_each_philo *each_philo)
+int check_died(t_each_philo *each_philo, t_philo **info_utils)
 {
-	const int left = each_philo->id - 1;
-	const int right = each_philo=>id % each_philo->info_utils->nbr_philo;
+	pthread_mutex_lock(&(info_utils)->mutex);
 
-
-}
-
-static void put_forks(t_each_philo *each_philo)
-{
-
-}
-
-static void	eating(t_each_philo *each_philo)
-{
-
-}
-
-static void	sleeping(t_each_philo *each_philo)
-{
-	if(	
-}
-
-void	*routine(void	*each_philo)
-{
-	
 }

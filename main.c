@@ -1,7 +1,19 @@
-int mails = 0;
-pthread_mutex_t mutex;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/14 15:46:57 by qxia              #+#    #+#             */
+/*   Updated: 2022/04/14 15:49:10 by qxia             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *routine()
+#include "philo.h"
+
+
+static int	()
 {
 	for (int i = 0; i < 10000000; i++)
 	{
@@ -23,4 +35,5 @@ int main(int ac, char **av)
 	pthread_mutex_lock(&mutex);
 	pthread_mutex_unlock();
 	return (0);
+}
 

@@ -6,7 +6,7 @@
 /*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 11:10:32 by qxia              #+#    #+#             */
-/*   Updated: 2022/04/14 13:13:22 by qxia             ###   ########.fr       */
+/*   Updated: 2022/04/14 16:12:44 by qxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int ft_strlen(char const *str)
 	return (i);
 }
 
-int ft_atoi(char const *str)
+long	ft_atoi(char const *str)
 {
 
 }

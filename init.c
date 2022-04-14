@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 15:11:05 by qxia              #+#    #+#             */
-/*   Updated: 2022/04/14 16:10:46 by qxia             ###   ########.fr       */
+/*   Created: 2022/04/14 17:07:22 by qxia              #+#    #+#             */
+/*   Updated: 2022/04/14 17:14:48 by qxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "philo.h"
 
-static void	philo_eat(t_each_philo *each_philo)
+t_philo *init_actions(char **av)
 {
-	const int left = each_philo->id - 1;
-	const int right = each_philo=>id % each_philo->info_utils->nbr_philo;
+	t_philo *philo;
 
+	philo = ft_calloc(sizeof(t_philo), 1);
+	if (!philo)
+		return (NULL);
+	philo->nbr_philo = ft_atoi(av[1]);
+	philo->time_to_die = ft_atoi(av[2]);
+	philo->time_to_eat = ft_atoi(av[3]);
+	philo->time_to_sleep = ft_atoi(av[4]);
 
-}
-
-static void put_forks(t_each_philo *each_philo)
-{
-
-}
-
-static void	eating(t_each_philo *each_philo)
-{
-
-}
-
-static void	sleeping(t_each_philo *each_philo)
-{
-	if(	
-}
-
-void	*routine(void	*each_philo)
-{
-	
 }
