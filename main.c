@@ -6,23 +6,11 @@
 /*   By: qxia <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 15:46:57 by qxia              #+#    #+#             */
-/*   Updated: 2022/04/14 15:49:10 by qxia             ###   ########.fr       */
+/*   Updated: 2022/04/15 15:34:11 by qxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-
-static int	()
-{
-	for (int i = 0; i < 10000000; i++)
-	{
-		pthread_mutex_lock(&mutex);
-		mails++; // read mails et increment et write mails
-		pthread_mutex_unlock(&mutex);
-	}
-	return NULL;
-}
 
 int main(int ac, char **av)
 {
