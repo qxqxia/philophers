@@ -5,35 +5,37 @@
 #                                                     +:+ +:+         +:+      #
 #    By: qxia <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/04 15:10:32 by qxia              #+#    #+#              #
-#    Updated: 2022/04/11 16:32:59 by qxia             ###   ########.fr        #
+#    Created: 2022/05/06 10:56:47 by qxia              #+#    #+#              #
+#    Updated: 2022/05/10 11:23:48 by qxia             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 	= philo
+NAME = philo
+CC = gcc
+CFLAGE = -Wall -Wextra -Werror
 
-CC 		= gc
+SRC := src/main.c \
+		src/utils.c \
+		src/init.c \
+		src/philo.c \
+		src/check.c 
 
-CFLAG 	= -Wall -Wextra -Werror -g3 -fsanitize=address
-
-SRC		= 
-
-OBJ		= $(SRC:%.c=%.o)
+OBJ := $(SRC:%.c=%.o)
 
 %.o: %.c
-	$(CC) $(CFLAG) -I. -c $< -o $@
+	$(CC) $(CFLAGE) -I. -c $< -o $@
 
-$(NAME) : $(OBJ)
-	$(CC) $(CFLAG) $(OBJ) -I. -O $@
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGE) $(OBJ) -lpthread -I. -o $@
 
 all: $(NAME)
 
 clean:
 	rm -rf $(OBJ)
-
+	
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re : fclean all
 
 .PHONY: all clean fclean re
